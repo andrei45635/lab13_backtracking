@@ -35,6 +35,13 @@ def solutionFound(result_lista):
 
 
 def BackRec(lista, index, sublista):
+    """
+    Generare sub-secvente
+    :param lista: lista = (lista0,lista1,...,lista2n+1)
+    :param index: index = 0
+    :param sublista: sublista
+    :return:
+    """
     if index == len(lista):
         for i in range(len(lista)//10):
             if consistent(lista) and consistent2(sublista) and consistent_last(sublista) and solution(sublista):
