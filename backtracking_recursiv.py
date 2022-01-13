@@ -6,7 +6,7 @@
 def consistent(lista):
     # verify if the subset starts and ends with 0
     for i in range(0, len(lista)):
-        if (abs(lista[i] - lista[i - 1]) == 1 or abs(lista[i] - lista[i - 1])) == 2 :
+        if (abs(lista[i] - lista[i - 1]) == 1 or abs(lista[i] - lista[i - 1])) == 2:
             return True
     return False
 
@@ -20,7 +20,7 @@ def consistent2(sublista):
 
 def consistent_last(sublista):
     for i in range(len(sublista)):
-        if sublista[0] == 1 or sublista[0] == -1 or sublista[-1] == 1 or sublista[-1] == -1:
+        if sublista[0] != 0 or sublista[-1] != 0:
             return False
     return True
 

@@ -1,22 +1,21 @@
 def back_iter(sol, dim):
     """
     Generare sub-secvente
-    :param sol: x=(x0,x1,...,x2n+1)
+    :param sol: lista=(lista0,lista1,...,lista2n+1)
     :param dim: 2n+1
     :return: sol
     """
-    def valid(x, dom):
+    def valid(lista, dom):
         try:
-            x = [dom[el] for el in x]
+            lista = [dom[el] for el in lista]
         except IndexError:
             return False
-
-        if x[-1] != "0" and len(x) == 2*dim+1:
+        if lista[-1] != "0" and len(lista) == 2*dim+1:
             return False
-        for el in range(0, len(x)-1):
-            if x[el] == x[el+1]:
+        for el in range(0, len(lista)-1):
+            if lista[el] == lista[el+1]:
                 return False
-            if x[0] != "0":
+            if lista[0] != "0":
                 return False
         return True
 
